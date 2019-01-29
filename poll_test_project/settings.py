@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 import django_heroku
+import dj_database_url
 import os
 import datetime
 from decouple import config
@@ -115,16 +116,11 @@ WSGI_APPLICATION = 'poll_test_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DEFAULT_DB_NAME'),
-        'USER': config('DEFAULT_DB_USER'),
-        'PASSWORD': config('DEFAULT_DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': '',
-    }
-}
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )}
 
 # Bcrypt password hashing algorithm used
 PASSWORD_HASHERS = [
