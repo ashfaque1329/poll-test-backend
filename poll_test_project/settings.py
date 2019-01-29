@@ -89,7 +89,7 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
     '127.0.0.1:3000',
-    'https: // nostalgic-jennings-330238.netlify.com'
+    'https://nostalgic-jennings-330238.netlify.com'
 )
 
 
