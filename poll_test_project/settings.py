@@ -88,6 +88,16 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+CORS_ALLOW_HEADERS = (
+    'Access-Control-Allow-Origin',
+    'x-requested-with',
+    'content-type',
+    'accept',
+    'origin',
+    'authorization',
+    'x-csrftoken'
+)
+
 ROOT_URLCONF = 'poll_test_project.urls'
 
 TEMPLATES = [
