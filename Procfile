@@ -1,1 +1,1 @@
-web: gunicorn poll-test-backend.config.settings.wsgi
+web: gunicorn poll-test-project.wsgi --log-file -
