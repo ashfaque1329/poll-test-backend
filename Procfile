@@ -1,1 +1,1 @@
-web: gunicorn poll_test_project.wsgi
+web: gunicorn poll-test-backend.wsgi
